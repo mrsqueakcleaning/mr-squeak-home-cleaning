@@ -545,7 +545,7 @@ a:focus {
 /* Small Screens (Phones) */
 @media (max-width: 768px) {
     .message-bubble {
-        left: 70px;
+        left: 10px;
         font-size: 18px;
         margin-bottom: 130px;
     }
@@ -619,7 +619,7 @@ a:focus {
 @media (max-width: 768px) {
     .about .about-img img {
         width: 200px;
-    right: 70px;
+    right: 10px;
     }
 }
 
