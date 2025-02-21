@@ -1440,7 +1440,12 @@ a img:hover {
       width: calc(50% - 20px); /* Two steps per row on tablets */
     }
   }
-  
+  /* One step per row on mobile */
+@media (max-width: 768px) { 
+    .how-it-works .step {
+      width: 100%; /* Full width for one step per row */
+    }
+  }
   
 .newsletter {
     position: relative;
