@@ -1,0 +1,2477 @@
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+.fab.fa-twitter {
+    font-family: sans-serif !important; /* Override FontAwesome Brand font */
+}
+
+.fab.fa-twitter::before {
+    content: "𝕏"; /* Replace Twitter icon with "𝕏" */
+    font-size: 1.2em; /* Adjust size */
+}
+
+
+body {
+    color: #666666;
+    background: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    font-weight: 100;
+}
+
+a {
+    color: #454545;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #00539C;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    color: #000000;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    border-radius: 5px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 9;
+}
+
+.back-to-top:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.back-to-top i {
+    padding-top: 10px;
+}
+
+
+/*******************************/
+/********** Header CSS *********/
+/*******************************/
+.header {
+    position: relative;
+    width: 100%;
+    padding: 15px 0 0 0;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+@media (max-width: 768px) { /* Targets devices with a width of 768px or smaller */
+    .header {
+        padding: 4px 0 0 0; /* Reduced padding for a thinner header */
+    }
+}
+.header.home {
+    position: relative;
+    z-index: 1; /* Ensures waves appear above it */
+    margin-bottom: 0; /* Remove spacing that caused thin bottom line */
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 992px) {
+    .header .row {
+        padding: 0 60px;
+    }
+}
+
+.header .header-top {
+    padding-bottom: 15px;
+    border-bottom: 0px solid rgba(255, 255, 255, .1);
+}
+
+.header .brand {
+    position: relative;
+}
+
+.header .brand a {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 100;
+}
+
+.header .brand img {
+    width: 100%;
+    max-width: 150px;
+    height: 100%;
+    max-height: 100px;
+}
+
+.header .topbar {
+    position: relative;
+    text-align: right;
+}
+
+.header .topbar .topbar-col {
+    display: inline-block;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.header .topbar-col a {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.header .topbar-col a i {
+    margin-right: 10px;
+    color: #FFD662;
+}
+
+.header .topbar-social {
+    position: relative;
+}
+
+.header .topbar-social a {
+    display: inline-block;
+}
+
+.header .topbar-social a i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.header .topbar-social a:last-child i {
+    margin: 0;
+}
+
+.header .topbar-social a:hover i {
+    color: #FFD662;
+}
+/* Show on desktop (min-width: 992px) */
+@media (min-width: 992px) {
+    .topbar {
+        display: block;
+    }
+}
+
+/* Hide on mobile (max-width: 991px) */
+@media (max-width: 991px) {
+    .topbar {
+        display: none;
+    }
+}
+
+.header .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 5px;
+    background: #eeeeee;
+}
+
+.header .dropdown-menu a.active {
+    color: #FFD662;
+}
+
+@media (min-width: 992px) {
+    .header .navbar {
+        background: transparent !important;
+    }
+    
+    .header .navbar-brand {
+        display: none;
+    }
+    
+    .header .navbar-light a.nav-link,
+    .header .navbar-light .show > .nav-link {
+        position: relative;
+        padding: 8px 10px;
+        color: #ffffff;
+        font-size: 16px;
+        z-index: 1;
+    }
+    
+    .header .navbar-light a.nav-link:hover,
+    .header .navbar-light a.nav-link.active {
+        color: #FFD662;
+    }
+}
+
+@media (max-width: 992px) {
+    .header .brand {
+        text-align: center;
+        margin-bottom: -20px;
+    }
+    
+    .header .topbar {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .header .topbar .topbar-col {
+        margin: 0;
+    }
+    
+    .header .topbar .topbar-social {
+        margin-top: 5px;
+    }
+    
+    .header .navbar {
+        background: transparent !important;
+        border: none;
+        z-index: 1;
+    }
+    
+    .header a.nav-link {
+        padding: 5px 0;
+    }
+    
+    .header .dropdown-menu {
+        box-shadow: none;
+    }
+}
+
+.header .navbar .btn {
+    position: relative;
+    margin-left: 15px;
+    padding: 12px 20px 10px 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #00539C;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: .3s;
+}
+
+.header .navbar .btn:hover {
+    color: #000000;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+}
+
+.header .navbar .btn i {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+@media (max-width: 992px) {
+    .header .navbar {
+        border-radius: 5px;
+    }
+    
+    .header .navbar .btn {
+        display: none;
+    }
+}
+
+.header .hero {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.header .hero h2 {
+    margin: 0;
+    font-size: 60px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.header .hero h2 span {
+    color: #FFD662;
+}
+
+.header .hero p {
+    margin: 10px 0 20px 0;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.header .hero a.btn {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #00539C;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: .3s;
+}
+
+.header .hero a.btn:hover {
+    color: #000000;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+}
+
+.header .hero .form {
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .3);
+    border-radius: 5px;
+}
+
+.header .hero .form h3 {
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.header .hero .form input,
+.header .hero .form select,
+.header .hero .form textarea {
+    margin-bottom: 15px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    background: rgba(255, 255, 255, .2);
+}
+
+.header .hero .form textarea {
+    height: 75px;
+}
+
+.header .hero .form select,
+.header .hero .form input::placeholder,
+.header .hero .form textarea::placeholder {
+    color: #ffffff;
+}
+
+.header .hero .form select option:not(:checked) {
+    color: #666666;
+}
+
+.header .hero .form .btn {
+    position: relative;
+    padding: 10px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    transition: .3s;
+}
+
+.header .hero .form .btn:hover {
+    color: #00539C;
+    background: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+    .header .hero .form {
+        margin-top: 45px;
+    }
+}
+
+
+/*******************************/
+/******* Page Header CSS *******/
+/*******************************/
+.page-header {
+    position: relative;
+    margin-top: 10px; /* Add space between the header and the page-header */
+    margin-bottom: 25px;
+    padding: 55px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #74B2D4, #89C3E0, #A0D4ED);
+}
+
+/* Adjust the height for mobile screens */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 20px 0; /* Reduce the padding for smaller screens */
+    }
+}
+
+
+
+.page-header h2 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Adjust font size for mobile screens */
+@media (max-width: 768px) {
+    .page-header h2 {
+        font-size: 45px; /* Smaller font size for mobile screens */
+    }
+}
+
+
+.page-header a {
+    position: relative;
+    padding: 0 12px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #00539C;
+}
+
+.page-header a:hover {
+    color: #ffffff;
+}
+
+.page-header a::after {
+    position: absolute;
+    content: "/";
+    width: 8px;
+    height: 8px;
+    top: -2px;
+    right: -7px;
+    text-align: center;
+    color: #666666;
+}
+
+.page-header a:last-child::after {
+    display: none;
+}
+
+
+/*******************************/
+/******* Section Header ********/
+/*******************************/
+.section-header {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    padding-bottom: 15px;
+}
+
+.section-header::before {
+    position: absolute;
+    content: ""; /* Make the pseudo-element visible */
+    width: 100px; /* Length of the line */
+    height: 2px; /* Thickness of the line (thin) */
+    left: calc(50% - 50px); /* Center align the line */
+    bottom: 0; /* Place it at the bottom of the section header */
+    background: #00539C; /* Main blue color */
+    border-radius: 0; /* Remove any rounded edges */
+}
+
+.section-header::after {
+    display: none; /* Hide the decorative dot/rectangle */
+}
+
+.section-header p {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.section-header h2 {
+    color: #00539C;
+    font-size: 50px;
+    font-weight: 200;
+}
+.section-header h2 span {
+    font-weight: 600;
+}
+.section-header.left {
+    text-align: left;
+}
+
+.section-header.left::before {
+    width: 60px;
+    left: 0;
+    background: #00539C;
+    border-radius: 0;
+}
+
+.section-header.left::after {
+    left: 0;
+    border-radius: 5px;
+}
+.section h2 {
+    color: #00539C;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+
+.message-bubble {
+    display: inline-block; 
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    position: relative;
+    bottom: 0px;
+    left: 85px;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.4; 
+    text-align: left;
+    max-width: fit-content;
+  }
+ /* Medium Screens (Tablets, Small Laptops) */
+@media (max-width: 1024px) {
+    .message-bubble {
+        left: 20px;
+        font-size: 16px;
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+    .message-bubble {
+        left: 70px;
+        font-size: 18px;
+        margin-bottom: 130px;
+    }
+}
+
+
+/* Base styles for the sparkling effect */
+.sparkling-text {
+    font-size: 1rem; /* Adjust font size as needed */
+    font-weight: regular;
+    color: #666666; /* Solid blue text */
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Hide the animation outside the text bounds */
+    vertical-align: bottom; /* Align vertically with the baseline of surrounding text */
+  }
+  
+  /* Create the "glare" effect */
+  .sparkling-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%; /* Start far to the left of the text */
+    width: 120%; /* Large enough to cover the text */
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: skewX(-25deg); /* Add the diagonal tilt */
+    animation: shine 3s infinite; /* Repeat animation every 3 seconds */
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -150%;
+    }
+    30% {  
+      left: -50%; /* Moves slowly at the start */
+    }
+    60% {  
+      left: 50%; /* Moves gradually across */
+    }
+    100% {
+      left: 150%; /* Ends smoothly */
+    }
+  }
+  
+
+/* Mr. Squeak Image */
+.about {
+    position: relative;
+}
+
+/* Default size for large screens */
+.about .about-img img {
+    width: 220px;
+    height: auto;
+    display: block;
+    position: absolute;
+    bottom: 10px;  /* Moves UP */
+    right: 45px;     /* Moves LEFT */
+    margin: 0;
+    
+}
+/* Medium Screens (Tablets, Small Laptops) */
+@media (max-width: 1024px) {
+    .about .about-img img {
+        width: 210px;
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+    .about .about-img img {
+        width: 200px;
+    right: 70px;
+    }
+}
+
+
+
+
+
+/* Ensure proper alignment */
+.row.align-items-center {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    position: relative; /* So the image stays at the bottom */
+}
+
+.about {
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+    text-align: left; /* Align all text to the left */
+}
+
+
+
+
+.about .about-text h2 {
+    position: relative;
+    color: #00539C;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.about .about-text h2 span {
+    font-weight: 300;
+}
+
+.about .about-text p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.about .about-text p span {
+    font-weight: bold;
+    color: #00539C
+}
+
+.about .about-text a.btn {
+    padding: 15px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    transition: .3s;
+}
+
+.about .about-text a.btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+/* General Button Styling */
+a.btn.btn.bottom {
+    display: inline-block; /* Ensures proper block-level alignment */
+    padding: 15px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    transition: 0.3s; /* Smooth transition for hover effect */
+    text-align: center;
+    margin: 20px auto; /* Centers the button horizontally */
+    position: relative;
+}
+
+/* Hover Effect */
+a.btn.btn.bottom:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+/* Ensure Center Alignment */
+.btn.bottom {
+    display: block; /* Ensures the button spans its own line */
+    margin: 0 auto; /* Horizontally centers the button */
+    text-align: center; /* Aligns text inside the button */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    a.btn.btn.bottom {
+        width: auto; /* Adapts the width for smaller screens */
+    }
+}
+
+
+/*******************************/
+/********** locations **********/
+/*******************************/
+.about-location .row {
+    display: flex;
+    align-items: center;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.map-img {
+    width: 100%; /* Ensures the image scales properly */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 100vh; /* Prevents the image from getting too tall */
+    object-fit: cover; /* Ensures it fills the column without distortion */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-location .row {
+        flex-direction: column;
+    }
+
+    .map-container {
+        width: 100%;
+    }
+
+    .map-img {
+        max-height: 50vh;
+    }
+}
+.about-location-text h2 {
+    position: relative;
+    color: #00539C;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.about-location-text h2 span {
+    font-weight: 300;
+}
+
+.about-location-text p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.about-location-text p span {
+    font-weight: bold;
+    color: #00539C;
+}
+
+.about-location-text a.btn {
+    padding: 15px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    transition: .3s;
+}
+
+.about-location-text a.btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+
+/*******************************/
+/********* Service CSS *********/
+/*******************************/
+.service {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.service .service-item {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.20);
+}
+
+.service .service-item img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.service .service-item h3 {
+    margin: 0;
+    padding: 30px 15px 15px 15px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #00539C;
+}
+
+.service .service-item h5 {
+    margin: 0;
+    padding: 0px 15px 15px 15px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #00539C;
+    text-decoration: underline;
+}
+
+.service .service-item h5:hover {
+    transform: scale(1.1);
+}
+
+
+.service .service-item p {
+    margin: 0;
+    padding: 0 25px 25px 25px;
+    font-size: 16px;
+}
+
+.service .service-item a.btn {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    transition: .3s;
+}
+
+.service .service-item:hover a.btn {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.service .service-item a.btn:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+.service-highlights {
+    background: #f8f9fa;
+    text-align: left;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px 15px 20px 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*******************************/
+/********* Feature CSS *********/
+/*******************************/
+.feature {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.feature .section-header {
+    margin-bottom: 30px;
+}
+
+.feature a.btn {
+    margin-top: 10px;
+    padding: 15px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    transition: .3s;
+}
+
+.feature a.btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.feature .feature-item {
+    margin-bottom: 30px;
+}
+
+.feature .feature-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.feature .feature-item h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #00539C;
+}
+
+.feature .feature-item p {
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 767.98px) {
+    .feature a.btn {
+        margin-bottom: 45px;
+    }
+}
+a img {
+    cursor: pointer;
+    transition: transform 0.2s; /* Add a smooth zoom-in effect */
+}
+
+a img:hover {
+    transform: scale(1.1); /* Zoom in slightly on hover */
+}
+
+
+/*******************************/
+/*********** Team CSS **********/
+/*******************************/
+.team {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.team .team-item {
+    margin-bottom: 30px;
+}
+
+.team .team-img {
+    position: relative;
+    font-size: 0;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.team .team-img img {
+    width: 100%;
+    height: auto;
+}
+
+.team .team-text {
+    padding: 150px 15px 30px 15px;
+    margin-top: -130px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    transition: .3s;
+}
+
+.team .team-text:hover {
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border: 1px solid #FFD662;
+}
+
+.team .team-text h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #00539C;
+}
+
+.team .team-text h3 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.team .team-social {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+}
+
+.team .team-social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    padding: 11px 0 10px 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.team .team-social a.social-tw {
+    background: #00acee;
+}
+
+.team .team-social a.social-fb {
+    background: #3b5998;
+}
+
+.team .team-social a.social-li {
+    background: #0e76a8;
+}
+
+.team .team-social a.social-in {
+    background: #3f729b;
+}
+
+.team .team-social a.social-yt {
+    background: #c4302b;
+}
+
+.team .team-social a:last-child {
+    margin-right: 0;
+}
+
+.team .team-social a:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+
+/*******************************/
+/*********** FAQs CSS **********/
+/*******************************/
+.faqs {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.faqs .section-header {
+    margin-bottom: 30px;
+}
+
+.faqs img {
+    width: 220px;
+    margin-left: 40px;
+}
+
+@media(max-width: 767.98px) {
+    .faqs img {
+        width: 200px;
+        margin-bottom: -60px;
+        margin-right: -20px;
+    }
+}
+
+.faqs .card {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid #eeeeee;
+}
+
+.faqs .card:last-child {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.faqs .card-header {
+    padding: 0;
+    border: none;
+    background: #ffffff;
+}
+
+.faqs .card-header a {
+    display: block;
+    width: 100%;
+    color: #00539C;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.faqs .card-header a span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    text-align: center;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    color: #000000;
+    border-radius: 5px;
+}
+
+.faqs .card-header [data-toggle="collapse"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f067";
+    float: right;
+    color: #00539C;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.faqs .card-header [data-toggle="collapse"][aria-expanded="true"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f068";
+    float: right;
+    color: #00539C;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.faqs .card-body {
+    padding: 15px 0 0 0;
+    font-size: 16px;
+    border: none;
+    background: #ffffff;
+}
+
+.faqs a.btn {
+    margin-top: 30px;
+    padding: 15px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    transition: .3s;
+}
+
+.faqs a.btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.message-bubble1 {
+    display: inline-block; 
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    position: relative;
+    bottom: 50px;
+    left: 0px;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.4; 
+    text-align: left;
+    max-width: fit-content;
+  }
+ /* Medium Screens (Tablets, Small Laptops) */
+@media (max-width: 1024px) {
+    .message-bubble1 {
+    
+        font-size: 20px;
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+    .message-bubble1 {
+        left: 0px;
+        font-size: 25px;
+        margin-bottom: 150px;
+    }
+}
+/*******************************/
+/****** Pricing Plan CSS *******/
+/*******************************/
+.price {
+    position: relative;
+    padding: 45px 0 15px 0;
+}
+
+.price .price-item {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+    margin-bottom: 30px;
+}
+
+.price .price-header {
+    padding: 30px 0 50px 0;
+    color: #000000;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border-radius: 5px 5px 0 0;
+}
+
+.price .featured-item .price-header {
+    color: #ffffff;
+    background: #00539C;
+}
+
+.price .price-icon {
+    margin-bottom: 15px;
+}
+
+.price .price-icon i {
+    display: inline-block;
+    font-size: 45px;
+}
+
+.price .price-title h2 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.price .price-pricing h2 {
+    font-size: 60px;
+    font-weight: 100;
+    margin-left: 15px;
+    margin-bottom: 0;
+}
+
+.price .price-pricing h2 small {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 16px;
+    margin-left: -15px;
+}
+
+.price .price-body {
+    padding: 20px 0;
+    background: #ffffff;
+    border-radius: 25px 30px 0 0;
+    margin-top: -30px;
+}
+
+.price .price-des ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.price .price-des ul li {
+    color: #2A293E;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 5px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.price .price-des ul li:last-child {
+    border: none;
+}
+
+.price .price-footer {
+    padding-bottom: 30px;
+    background: #ffffff;
+    border-radius: 0 0 5px 5px;
+}
+
+
+.price .price-action a {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border-radius: 5px;
+    transition:  .3s;
+}
+
+.price .price-action a i {
+    margin-right: 5px;
+}
+
+.price .price-action a:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.price .featured-item .price-action a {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.price .featured-item .price-action a:hover {
+    color: #000000;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+}
+
+
+/*******************************/
+/********** Newsletter *********/
+/*******************************/
+
+/************* WAVES **********/
+
+.wave-container {
+    position: absolute;
+    bottom: -55px; /* Move waves down */
+    left: -5px;
+    width: 120%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+}
+
+.waves {
+    position: relative;
+    width: 110%; /* Extend beyond screen to avoid borders */
+    height: 12vh;
+    min-height: 60px;
+    max-height: 120px;
+}
+
+.parallax > use {
+    animation: move-waves 15s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+    fill: rgba(255, 255, 255, 0.7);
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+    fill: rgba(255, 255, 255, 0.3);
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+    fill: #fff;
+}
+
+@keyframes move-waves {
+    0% {
+        transform: translateX(-90px);
+    }
+    100% {
+        transform: translateX(85px);
+    }
+}
+/* Mobile optimization */
+@media (max-width: 1024px) {
+    .waves {
+        height: 80vh;
+        min-height: 50px;
+    }
+}
+
+  
+  
+/* How It Works Section Styles */
+.how-it-works {
+    background-color: #ffffff; /* Light background for contrast */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .how-it-works .section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .how-it-works .steps {
+    display: flex;
+    flex-wrap: wrap; /* Wrap steps on smaller screens */
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .how-it-works .step {
+    background: #ffffff;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.333% - 20px); /* Three steps per row on desktop */
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .how-it-works .step:hover {
+    transform: translateY(-10px); /* Slight hover effect */
+  }
+  
+  .how-it-works .step-icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .how-it-works .step-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #00539C; /* Match your primary brand color */
+  }
+  
+  .how-it-works .step-description {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .how-it-works .step {
+      width: calc(50% - 20px); /* Two steps per row on tablets */
+    }
+  }
+  
+  
+.newsletter {
+    position: relative;
+    margin: 45px 0;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.newsletter h2 {
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.newsletter p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.newsletter .form {
+    position: relative;
+}
+
+.newsletter input {
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter .btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight:400;
+    text-transform: uppercase;
+    color: #000000;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.newsletter .btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+
+/*******************************/
+/******* Testimonial CSS *******/
+/*******************************/
+.testimonial {
+    position: relative;
+    padding: 45px 0;
+}
+
+.testimonial .testimonial-item {
+    position: relative;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.testimonial .testimonial-img {
+    position: relative;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.testimonial .testimonial-item img {
+    margin: 0 auto;
+    width: 150px;
+    border: 15px solid #ffffff;
+    border-radius: 100px;
+}
+
+.testimonial .testimonial-content {
+    position: relative;
+    margin-top: -90px;
+    padding: 100px 25px 25px 25px;
+    text-align: center;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border-radius: 5px;
+}
+
+.testimonial .testimonial-item p {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.testimonial .testimonial-content h3 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.testimonial .testimonial-content h4 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.testimonial .owl-nav,
+.testimonial .owl-dots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.testimonial .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+}
+
+.testimonial .owl-dot.active {
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+
+/*******************************/
+/*********** Blog CSS **********/
+/*******************************/
+.blog {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.blog .blog-item {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+.blog .blog-item img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.blog .blog-item h3 {
+    margin: 0;
+    padding: 25px 30px 5px 30px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #00539C;
+}
+
+.blog .blog-item .meta {
+    padding: 0 30px 15px 30px;
+}
+
+.blog .blog-item .meta * {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #999999;
+}
+
+.blog .blog-item .meta i {
+    margin: 0 2px 0 10px;
+}
+
+.blog .blog-item .meta i:first-child {
+    margin-left: 0;
+}
+
+.blog .blog-item p {
+    padding: 0 30px;
+    font-size: 16px;
+}
+
+.blog .blog-item a.btn {
+    position: relative;
+    margin: 5px 30px 30px 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    transition: .3s;
+}
+
+.blog .blog-item:hover a.btn {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.blog .blog-item a.btn:hover {
+    color: #000000;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+}
+
+
+/*******************************/
+/******* Call to Action ********/
+/*******************************/
+.call-to-action {
+    position: relative;
+    margin: 45px 0;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.call-to-action h2 {
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.call-to-action p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.call-to-action a {
+    float: right;
+    height: 60px;
+    padding: 16px 35px 14px 35px;
+    font-size: 18px;
+    font-weight:400;
+    text-transform: uppercase;
+    color: #000000;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.call-to-action a:hover {
+    color: #000000;
+    background: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .call-to-action a {
+        float: left;
+        margin-top: 30px;
+    }
+}
+
+
+/*******************************/
+/********** Story CSS **********/
+/*******************************/
+.story {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.story .container {
+    max-width: 960px;
+}
+
+.story .story-container {
+    position: relative;
+    width: 100%;
+}
+
+.story .story-end,
+.story .story-start,
+.story .story-year {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.story .story-end p,
+.story .story-start p,
+.story .story-year p {
+    display: inline-block;
+    width: 100px;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border: 1px solid #00539C;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.story .story-year {
+    margin: 30px 0;
+}
+
+.story .story-continue {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+}
+
+.story .story-continue::before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    margin-left: -1.5px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border-left: 1px solid #00539C;
+    border-right: 1px solid #00539C;
+}
+
+.story .row.story-left,
+.story .row.story-right .story-date {
+    text-align: right;
+}
+
+.story .row.story-right,
+.story .row.story-left .story-date {
+    text-align: left;
+}
+
+.story .story-date {
+    padding: 0 5px;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 41px 0 0 0;
+}
+
+.story .story-date::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: 42px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border: 1px solid #00539C;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.story .row.story-left .story-date::after {
+    left: -8.5px;
+}
+
+.story .row.story-right .story-date::after {
+    right: -8.5px;
+}
+
+.story .story-box,
+.story .story-launch {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 20px 25px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    background: #ffffff;
+}
+
+.story .story-launch {
+    width: 100%;
+    margin: 15px 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+    background: transparent;
+}
+
+.story .story-box::after,
+.story .story-box::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.story .row.story-left .story-box::after,
+.story .row.story-left .story-box::before {
+    left: 100%;
+}
+
+.story .row.story-right .story-box::after,
+.story .row.story-right .story-box::before {
+    right: 100%;
+}
+
+.story .story-launch .story-box::after,
+.story .story-launch .story-box::before {
+    left: 50%;
+    margin-left: -10px;
+}
+
+.story .story-box::after {
+    top: 26px;
+    border-color: transparent transparent transparent #ffffff;
+    border-width: 10px;
+}
+
+.story .story-box::before {
+    top: 25px;
+    border-color: transparent transparent transparent #dddddd;
+    border-width: 11px;
+}
+
+.story .row.story-right .story-box::after {
+    border-color: transparent #ffffff transparent transparent;
+}
+
+.story .row.story-right .story-box::before {
+    border-color: transparent #dddddd transparent transparent;
+}
+
+.story .story-launch .story-box::after {
+    top: -20px;
+    border-color: transparent transparent #dddddd transparent;
+}
+
+.story .story-launch .story-box::before {
+    top: -19px;
+    border-color: transparent transparent #ffffff transparent;
+    border-width: 10px;
+    z-index: 1;
+}
+
+.story .story-box .story-text {
+    position: relative;
+    float: left;
+}
+
+.story .story-launch .story-text {
+    max-width: 400px;
+}
+
+.story .story-text h3 {
+    color: #00539C;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.story .story-text p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .story .story-continue::before {
+        left: 48.5px;
+    }
+    
+    .story .story-end,
+    .story .story-start,
+    .story .story-year,
+    .story .row.story-left,
+    .story .row.story-right .story-date,
+    .story .row.story-right,
+    .story .row.story-left .story-date,
+    .story .story-launch {
+        text-align: left;
+    }
+    
+    .story .story-date {
+        padding: 0;
+    }
+    
+    .story .row.story-left .story-date::after,
+    .story .row.story-right .story-date::after {
+        left: 54.5px;
+    }
+    
+    .story .story-box,
+    .story .row.story-right .story-date,
+    .story .row.story-left .story-date {
+        margin-left: 77px;
+    }
+    
+    .story .story-launch .story-box {
+        margin-left: 0;
+    }
+    
+    .story .row.story-left .story-box::after {
+        left: -20px;
+        border-color: transparent #ffffff transparent transparent;
+    }
+
+    .story .row.story-left .story-box::before {
+        left: -22px;
+        border-color: transparent #dddddd transparent transparent;
+    }
+    
+    .story .story-launch .story-box::after,
+    .story .story-launch .story-box::before {
+        left: 30px;
+        margin-left: 0;
+    }
+}
+
+
+/*******************************/
+/******** Portfolio CSS ********/
+/*******************************/
+.portfolio {
+    position: relative;
+    padding: 45px 0;
+    background: #ffffff;
+}
+
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: -15px 0 25px 0;
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+}
+
+.portfolio #portfolio-flters li,
+.portfolio .load-more .btn {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    padding: 12px 15px;
+    color: #000000;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    transition: .3s;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+    color: #ffffff;
+}
+
+.portfolio .load-more {
+    text-align: center;
+}
+
+.portfolio .load-more .btn {
+    padding: 15px 35px;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.portfolio .load-more .btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.portfolio .portfolio-item {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.portfolio .portfolio-item figure {
+    background: #ffffff;
+    overflow: hidden;
+    height: 400px;
+    position: relative;
+    margin: 0; 
+}
+
+.portfolio .portfolio-item figure img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.portfolio .portfolio-item figure .link-preview,
+.portfolio .portfolio-item figure .link-details {
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    line-height: 1;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    top: -50px;
+    background: #ffffff;
+    transition: .3s;
+}
+
+.portfolio .portfolio-item figure .link-preview {
+    left: -50px;
+    border-radius: 0 80px;
+}
+
+.portfolio .portfolio-item figure .link-details {
+    right: -50px;
+    border-radius: 80px 0;
+}
+
+.portfolio .portfolio-item figure:hover .link-preview {
+    top: 0;
+    left: 0;
+}
+
+.portfolio .portfolio-item figure:hover .link-details {
+    top: 0;
+    right: 0;
+}
+
+.portfolio .portfolio-item figure .link-preview i,
+.portfolio .portfolio-item figure .link-details i {
+    color: #00539C;
+    padding-top: 25px;
+    font-size: 30px;
+}
+
+.portfolio .portfolio-item figure .link-preview:hover,
+.portfolio .portfolio-item figure .link-details:hover {
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.portfolio .portfolio-item figure .link-preview:hover i,
+.portfolio .portfolio-item figure .link-details:hover i {
+    color: #ffffff;
+}
+
+.portfolio .portfolio-item figure:hover .link-preview,
+.portfolio .portfolio-item figure:hover .link-details {
+    opacity: 1;
+}
+
+.portfolio .portfolio-item figure .portfolio-title {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+    color: #000000;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border-radius: 0 0 5px 5px;
+    transition: .3s;
+}
+
+.portfolio .portfolio-item figure .portfolio-title:hover {
+    text-decoration: none;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+    color: #ffffff;
+}
+
+
+/*******************************/
+/********* Contact CSS *********/
+/*******************************/
+.contact {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.contact .faqs {
+    padding: 0;
+}
+
+@media(max-width: 767.98px) {
+    .contact .faqs {
+        margin-bottom: 30px;
+    }
+}
+
+.contact .contact-form input {
+    height: 60px;
+    border-radius: 5px;
+}
+
+.contact .contact-form .btn {
+    height: 60px;
+    padding: 0 20px;
+    color: #000000;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.contact .contact-form .btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+
+/*******************************/
+/******* Single Page CSS *******/
+/*******************************/
+.single {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 65px 0;
+}
+
+.single h1,
+.single h2,
+.single h3,
+.single h4,
+.single h5,
+.single h6 {
+    font-weight: 400;
+}
+
+.single img {
+    margin: 10px 0 15px 0;
+}
+
+.single .table,
+.single .list-group {
+    margin-bottom: 30px;
+}
+
+.single .section-header h2 {
+    font-weight: 100;
+}
+.wave-text {
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00539C;
+  }
+  
+  .wave-text span {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+  }
+  
+  .wave-text span:nth-child(1) { animation-delay: 0s; }
+  .wave-text span:nth-child(2) { animation-delay: 0.1s; }
+  .wave-text span:nth-child(3) { animation-delay: 0.2s; }
+  .wave-text span:nth-child(4) { animation-delay: 0.3s; }
+  .wave-text span:nth-child(5) { animation-delay: 0.4s; }
+  .wave-text span:nth-child(6) { animation-delay: 0.5s; }
+  .wave-text span:nth-child(7) { animation-delay: 0.6s; }
+  .wave-text span:nth-child(8) { animation-delay: 0.7s; }
+  .wave-text span:nth-child(9) { animation-delay: 0.8s; }
+  .wave-text span:nth-child(10) { animation-delay: 0.9s; }
+  .wave-text span:nth-child(11) { animation-delay: 1s; }
+  
+  @keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+    position: relative;
+    margin-top: 5px;
+    padding-top: 50px;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.footer .footer-contact,
+.footer .footer-link,
+.footer .footer-form {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.footer .footer-contact h2,
+.footer .footer-link h2,
+.footer .footer-form h2{
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFD662;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer .footer-contact p {
+    font-size: 14px;
+}
+
+.footer .footer-contact p i {
+    width: 25px;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 25px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
+    color: #FFD662;
+}
+
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    
+}
+
+.footer .footer-link a::before {
+    position: relative;
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .footer-link a:hover {
+    color: #FFD662;
+}
+
+.footer .footer-form input {
+    height: 45px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer .footer-form .btn {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-size: 14px;
+    font-weight:400;
+    text-transform: uppercase;
+    color: #000000;
+    background: linear-gradient(135deg, #FFCC4D, #FFDF85);
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.footer .footer-form .btn:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #004b8c, #2E7EBB);
+}
+
+.footer .footer-menu {
+    position: relative;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu .f-menu {
+    font-size: 0;
+    text-align: center;
+}
+
+.footer .footer-menu .f-menu a {
+    color: #ffffff;
+    font-size: 14px;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #ffffff;
+}
+
+.footer .footer-menu .f-menu a:hover {
+    color: #FFD662;
+}
+
+.footer .footer-menu .f-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+
+.footer .copyright {
+    padding: 30px 15px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .copyright p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: center;
+}
+
+.footer .copyright p a {
+    color: #FFD662;
+    font-weight: 400;
+}
+
+.footer .copyright p a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer .copyright p,
+    .footer .copyright .col-md-6:last-child p {
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+/* Hamburger button styles */
+.navbar-toggler {
+    border: none;
+    outline: none;
+    position: absolute; /* Position the button */
+    top: -30px;  /* Adjust top position */
+    right: 15px; /* Move the button to the right */
+    z-index: 10; /* Keep the button on top */
+    background: transparent; /* Ensure background is transparent */
+    padding: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition on hover and click */
+}
+
+/* Hamburger icon lines (make them white) */
+.navbar-toggler span {
+    display: block;
+    width: 30px;  /* Set the width of each line */
+    height: 2px;  /* Height of each line */
+    background-color: #fff;  /* Make the lines white */
+    border-radius: 2px; /* Rounded corners for each line */
+    margin: 5px 0; /* Space between the lines */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Default state: hamburger (when the menu is closed) */
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(2),
+.navbar-toggler span:nth-child(3) {
+    transform: none; /* No transform for the hamburger icon lines */
+    opacity: 1; /* Ensure the lines are visible */
+}
+
+/* When the menu is open, transform hamburger into X */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Top line rotates */
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;  /* Middle line disappears */
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Bottom line rotates */
+}
+
+/* Ensure the hamburger icon is visible when the menu is closed (collapsed) */
+.navbar-toggler.collapsed span:nth-child(1),
+.navbar-toggler.collapsed span:nth-child(2),
+.navbar-toggler.collapsed span:nth-child(3) {
+    transform: none; /* Reset any transformation */
+    opacity: 1; /* Make lines visible */
+}
+
+/* Hover effect on the button */
+.navbar-toggler:hover {
+    transform: scale(1.1);  /* Slightly enlarge the hamburger button on hover */
+    opacity: 0.8;  /* Slight transparency effect */
+}
+
+/* Active state effect (when the menu is opened) */
+.navbar-toggler:not(.collapsed) {
+    transform: scale(0.9); /* Slight shrinking effect when the menu opens */
+}
+
+/* Ensure the background color remains transparent when the menu is open */
+.navbar-toggler.collapsed {
+    background-color: transparent;
+}
+
+/* Ensuring that the hamburger is shown initially */
+.navbar-toggler.collapsed span:nth-child(1),
+.navbar-toggler.collapsed span:nth-child(2),
+.navbar-toggler.collapsed span:nth-child(3) {
+    transform: none; /* No transform applied */
+    opacity: 1; /* Ensure all lines are visible */
+}
+/* Make sure menu items are white on mobile */
+@media (max-width: 767px) {
+    /* Change the text color of menu items inside the mobile navbar */
+    .navbar-collapse .nav-link {
+        color: #fff !important;  /* Force the color to white, override other styles */
+    }
+
+    /* Optional: Hover effect */
+    .navbar-collapse .nav-link:hover {
+        color: #FFD662 !important;  /* Slightly lighter color on hover */
+    }
+
+    /* Optional: Adjust background color or link styles if necessary */
+    .navbar-collapse .nav-item {
+        background-color: transparent; /* Ensure no background is interfering */
+    }
+}
