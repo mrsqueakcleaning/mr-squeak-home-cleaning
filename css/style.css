@@ -2480,3 +2480,14 @@ a img:hover {
         background-color: transparent; /* Ensure no background is interfering */
     }
 }
+img.stars {
+    width: 30%; /* Default size for larger screens */
+    display: block;
+    margin: 50px auto 0;
+}
+
+@media only screen and (max-width: 768px) {
+    img.stars {
+        width: 50%; /* Increase size on mobile */
+    }
+}
