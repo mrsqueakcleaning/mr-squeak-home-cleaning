@@ -1322,7 +1322,6 @@ a img:hover {
     position: absolute;
     bottom: -55px; /* Move waves down */
     left: -5px;
-    width: 120%;
     overflow: hidden;
     line-height: 0;
     z-index: 2;
@@ -2491,3 +2490,4 @@ img.stars {
         width: 50%; /* Increase size on mobile */
     }
 }
+
