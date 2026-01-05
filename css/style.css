@@ -1321,9 +1321,10 @@ a img:hover {
 .wave-container {
     position: absolute;
     bottom: -55px; /* Move waves down */
-    left: -5px;
+    right: 0;
     overflow: hidden;
     line-height: 0;
+    width: 100%;
     z-index: 2;
 }
 
@@ -2490,4 +2491,5 @@ img.stars {
         width: 50%; /* Increase size on mobile */
     }
 }
+
 
