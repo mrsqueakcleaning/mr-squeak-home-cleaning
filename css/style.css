@@ -599,12 +599,12 @@ a:focus {
 
 /* Default size for large screens */
 .about .about-img img {
-    width: 220px;
+    width: 256px;
     height: auto;
     display: block;
     position: absolute;
     bottom: 10px;  /* Moves UP */
-    right: 45px;     /* Moves LEFT */
+    right: 10px;     /* Moves LEFT */
     margin: 0;
     
 }
